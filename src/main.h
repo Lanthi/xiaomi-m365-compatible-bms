@@ -25,13 +25,13 @@ struct BMSSettings
 {
     uint8_t header[2] = {0xB0, 0x0B};
     uint16_t version = 1;
-    char serial[14] = "BOTOX001";
-    uint32_t capacity = 7800; // mAh
+    char serial[14] = "Lanthi 12s5p";//pon el nombre que quieras se verá solo 11 caracteres 
+    uint32_t capacity = 13800; // mAh Pon aquí tus Miliamperios reales si tienes comprabador de amperios mira tu bateria real en la salida 
     uint16_t nominal_voltage = 3600; // mV
-    uint16_t full_voltage = 4150; // mV
+    uint16_t full_voltage = 4175; // mV
     uint16_t num_cycles = 0;
     uint16_t num_charged = 0;
-    uint16_t date = (18 << 9) | (10 << 5) | 1; // MSB (7 bits year, 4 bits month, 5 bits day) LSB
+    uint16_t date = (20 << 9) | (11 << 5) | 10; // MSB (7 bits year, 4 bits month, 5 bits day) LSB
 
     // setShuntResistorValue
     uint16_t shuntResistor_uOhm = 1000;
@@ -50,7 +50,7 @@ struct BMSSettings
     uint16_t SCD_delay = 200; // us
 
     // setOvercurrentChargeProtection
-    uint32_t OCD_current = 6000; // mA
+    uint32_t OCD_current = 5000; // mA
     uint16_t OCD_delay = 3000; // ms
 
     // setOvercurrentDischargeProtection
